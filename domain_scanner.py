@@ -1,11 +1,9 @@
 # importing library
-import email
 import pip
 import os
 
 package1 = "requests" # naming the requests package
 package2 = "colorama" # naming the requests package
-package3 = "yagmail" # naming the requests package
 package4= "tkinter" # naming the requests package
 
 # simply installs packages if it doesnt exist
@@ -15,13 +13,13 @@ def import_or_install(package):
     try:
         __import__(package)
     except ImportError:
-        pip.main(['install', package])
+       os.system("pip install " + package)
+	   
 
 # installs...
 
 import_or_install(package1)     
-import_or_install(package2)      
-import_or_install(package3)  
+import_or_install(package2)       
 import_or_install(package4)
 
 # imports :)
@@ -29,7 +27,6 @@ import_or_install(package4)
 import requests # import
 import colorama
 from colorama import Fore
-import yagmail
 import tkinter
 from tkinter import messagebox
 
@@ -37,7 +34,6 @@ from tkinter import messagebox
 
 root = tkinter.Tk()
 root.withdraw()
-
 
 # the scanner :)
 def domain_scanner(domain_name,sub_domnames):
@@ -104,3 +100,4 @@ if __name__ == '__main__':
 	# and parses subdomains.
 	while True:
 		domain_scanner(dom_name,sub_dom)
+input()
