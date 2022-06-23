@@ -10,3 +10,4 @@ You can leave it running, put it as a start-up program, do whatever you want wit
 # Special Thanks
 
 Thanks to ELT3AH for the idea for this project.
+Also to Joey for being my tester.
